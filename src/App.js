@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Tables from "../src/table/Tables";
+import Map from "../src/map/./Map";
+import { BrowserRouter as Router, Switch, Route, Link, Routes, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<Tables />} />
+                <Route exact path="/map" element={<Map />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

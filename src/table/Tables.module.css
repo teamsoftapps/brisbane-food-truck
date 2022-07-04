@@ -1,0 +1,26 @@
+.mainWrap h1 {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+.wrapper {
+    border: 1px solid #002d62;
+    margin: 0px 10vw;
+    /* border-radius: 10px; */
+    background-color: #f0f8ff;
+}
+
+.inner {
+    display: flex;
+}
+.inner div {
+    padding: 10px;
+    border: 1px solid #002d62;
+}
+.left {
+    width: 20vw;
+    font-family: "Courier New", Courier, monospace;
+}
+.right {
+    width: 80vw;
+    font-family: "Courier New", Courier, monospace;
+}
