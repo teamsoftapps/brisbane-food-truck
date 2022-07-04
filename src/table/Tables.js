@@ -10,14 +10,16 @@ function Tables() {
     useEffect(() => {
         getTableData();
     }, []);
-    async function getTableData() {
+    const getTableData = async () => {
         try {
-            let res = await axios.get("");
+            let res = await axios.get("https://www.bnefoodtrucks.com.au/api/1/trucks");
             setTdata(res);
+            console.log(res);
         } catch (err) {
             console.log(err);
         }
-    }
+    };
+
     return (
         <div className={classes.mainWrap}>
             <div className={classes.nav}>
