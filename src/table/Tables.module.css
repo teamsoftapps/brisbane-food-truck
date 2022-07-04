@@ -8,7 +8,23 @@
     /* border-radius: 10px; */
     background-color: #f0f8ff;
 }
-
+.nav {
+    background-color: #002d62;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav div {
+    margin-right: 5vw;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.nav div:hover {
+    cursor: pointer;
+}
 .inner {
     display: flex;
 }

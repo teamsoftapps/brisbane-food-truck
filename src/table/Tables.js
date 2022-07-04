@@ -1,9 +1,28 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import classes from "./Tables.module.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Tables() {
+    const history = useNavigate();
+    const [tData, setTdata] = useState("");
+    console.log(tData);
+    useEffect(() => {
+        getTableData();
+    }, []);
+    async function getTableData() {
+        try {
+            let res = await axios.get("");
+            setTdata(res);
+        } catch (err) {
+            console.log(err);
+        }
+    }
     return (
         <div className={classes.mainWrap}>
+            <div className={classes.nav}>
+                <div onClick={() => history("map")}>Goto Map</div>
+            </div>
             <h1>Brisbane Food Trucks</h1>
             <div className={classes.wrapper}>
                 <div className={classes.inner}>
